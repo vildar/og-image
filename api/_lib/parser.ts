@@ -52,8 +52,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 
 function getDefaultImages(images: string[], theme: Theme): string[] {
     const defaultImage = theme === 'light'
-        ? 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg'
-        : 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-white.svg';
+        ? 'https://blueskyhq.cdn.prismic.io/blueskyhq/4cc1c696-9709-4c30-9b45-bdae0361f961_logo.svg'
+        : 'https://blueskyhq.cdn.prismic.io/blueskyhq/a35e5922-0887-4c88-8054-8e115ebaedbf_bsa-logo-white.svg';
 
     if (!images || !images[0]) {
         return [defaultImage];
@@ -61,5 +61,6 @@ function getDefaultImages(images: string[], theme: Theme): string[] {
     if (!images[0].startsWith('https://assets.vercel.com/') && !images[0].startsWith('https://assets.zeit.co/')) {
         images[0] = defaultImage;
     }
+
     return images;
 }
