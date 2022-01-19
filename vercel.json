@@ -1,11 +1,6 @@
 {
-  "regions": ["all"],
-  "functions": {
-    "api/**": {
-      "memory": 3008
-    }
+  "github": {
+    "enabled": true
   },
-  "rewrites": [
-    { "source": "/(.+)", "destination": "/api" }
-  ]
+  "rewrites": [{ "source": "/(.+)", "destination": "/api" }]
 }
